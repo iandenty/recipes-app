@@ -1,0 +1,31 @@
+{
+  "name": "recipes-app-api",
+  "version": "1.0.0",
+  "description": "API for recipes app client",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "server": "node ./index.js",
+    "client": "cd recipes-app-client && npm start",
+    "watch": "nodemon ./index.js",
+    "dev": "concurrently --kill-others \"npm run watch\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iandenty/recipes-app.git"
+  },
+  "author": "@iandenty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iandenty/recipes-app/issues"
+  },
+  "homepage": "https://github.com/iandenty/recipes-app#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "slugs": "^0.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.14.10"
+  }
+}
