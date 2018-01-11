@@ -8,6 +8,8 @@ import {
 import RecipesPage from './components/RecipesPage';
 import RecipePage from './components/RecipePage';
 
+import './footer.css';
+
 const App = () => (
   <Router>
     <div className="App">
@@ -15,6 +17,9 @@ const App = () => (
         <Route exact path="/" component={RecipesPage} />
         <Route  exact path="/:id" component={RecipePage} />
       </Switch>
+      <footer className="footer">
+        <span className="footer__title">ian denty</span>
+      </footer>
     </div>
   </Router>
 )

@@ -1,0 +1,11 @@
+.footer {
+  padding: 2%;
+  background-color: #565656;
+  color: #ffffff;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.footer__label {
+  font-size: 1rem;
+}
