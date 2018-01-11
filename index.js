@@ -8,6 +8,19 @@ app.get('/api/recipes', (req, res) => {
   res.json(recipes);
 });
 
+app.get('/api/recipes/:id', (req, res) => {
+  const recipe = recipes.find(recipe => recipe.id === parseInt(req.params.id));
+  res.json(recipe);
+});
+
+// Not used. Represents endpoint to store favourited recipes. This app assumes user exists and is logged in.
+// If user does not have recipe as favourite then add, else remove that recipe from database.
+// In this prototype, similar functionality being simulated in localStorage on the client-side.
+app.post('/api/recipes/:id', (req, res) => { 
+  const recipe = recipes.find(recipe => recipe.id === parseInt(req.params.id));
+  console.log(`${recipe.name} has been favourited! 👍`)
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
 const recipesList = [
