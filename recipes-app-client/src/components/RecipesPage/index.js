@@ -2,6 +2,7 @@ import React from 'react';
 
 // components
 import Hero from '../Hero';
+import RecipesList from '../RecipesList';
 
 const RecipesPage = () => (
   <div>
@@ -12,6 +13,7 @@ const RecipesPage = () => (
     <section className="content">
       <h2 className="visually-hidden">Recipes</h2>
       <div className="inner">
+        <RecipesList />
       </div>
     </section>
   </div>
