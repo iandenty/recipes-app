@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import Overdrive from 'react-overdrive';
 
 import './RecipeItem.css';
 import clock from './clock.svg';
@@ -17,6 +19,7 @@ class RecipeItem extends Component {
 
   render() {
     const { 
+      id,
       name, 
       cookingTime, 
       image, 
@@ -30,7 +33,8 @@ class RecipeItem extends Component {
       .map((ingredient, index) => <span className="recipe-item__ingredient" key={index}>{ingredient}</span>);
 
     return (
-      <div
+      <Link
+        to={`/${id}`}
         className={`recipe-item ${this.state.isHover ? 'recipe-item--hover' : ''}`}  
         onMouseEnter={this.handleHover}
         onMouseLeave={this.handleHover}
@@ -38,7 +42,7 @@ class RecipeItem extends Component {
         <div className="recipe-item__container">
           <h3 className="recipe-item__title">{name}</h3>
           <ul className="recipe-item__ingredients">{ingredientsItems}</ul>
-          <div className="recipe-item__hero-container">
+          <Overdrive id={`recipe-item-${id}`} className="recipe-item__hero-container">
             <div className="recipe-item__hero-image" style={recipeItemStyle}>
               <div className="recipe-item__details">
                 <div className="recipe-item__time">
@@ -48,14 +52,15 @@ class RecipeItem extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </Overdrive>
         </div>
-      </div>
+      </Link>
     );
   }
 }
 
 RecipeItem.propTypes = {
+  id: PropTypes.number,
   name: PropTypes.string, 
   cookingTime: PropTypes.string, 
   image: PropTypes.string, 
