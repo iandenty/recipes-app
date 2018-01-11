@@ -6,6 +6,9 @@ import Overdrive from 'react-overdrive';
 import './RecipeItem.css';
 import clock from './clock.svg';
 
+// Components
+import FavouriteForm from '../FavouriteForm';
+
 class RecipeItem extends Component {
   state = {
     isHover: false
@@ -50,6 +53,9 @@ class RecipeItem extends Component {
                   <span className="visually-hidden">Time to cook:</span>
                   <span className="recipe-item__time-text">{cookingTime}</span>
                 </div>
+              </div>
+              <div className="recipe-item__actions">
+                <FavouriteForm id={id} isForm={false} />
               </div>
             </div>
           </Overdrive>
