@@ -4,7 +4,7 @@
   "description": "API for recipes app client",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "start": "concurrently --kill-others \"npm run watch\" \"npm run client\"",
     "server": "node ./index.js",
     "client": "cd recipes-app-client && npm start",
     "watch": "nodemon ./index.js",

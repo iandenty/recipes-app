@@ -1,0 +1,18 @@
+.recipes-list__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+  background-size: cover;
+  background-position: center;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.recipes-list__warning {
+  font-size: 3rem;
+  color: #e38891;
+  display: block;
+  text-align: center;
+  margin-top: 100px;
+}
