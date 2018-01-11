@@ -76,7 +76,13 @@ class FavouriteForm extends Component {
           name="favourite"
           value={id}
           className={`favouite__button ${this.state.isFavourite ? 'favouite__button--active' : ''}`}
-        >☆</button>
+        >
+          <span className="visually-hidden">
+            {/* Provide context for users not relying on the visual cues */}
+            {this.state.isFavourite ? 'Unfavourite this recipe!' : 'Favourite this recipe!'}
+          </span>
+          ☆
+        </button>
       </form>
     );
   }

@@ -33,7 +33,7 @@ class RecipeItem extends Component {
       backgroundImage: `url(${image})`
     };
     const ingredientsItems = ingredients
-      .map((ingredient, index) => <span className="recipe-item__ingredient" key={index}>{ingredient}</span>);
+      .map(ingredient => <span className="recipe-item__ingredient" key={ingredient}>{ingredient}</span>);
 
     return (
       <Link

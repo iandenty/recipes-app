@@ -40,9 +40,9 @@ const RecipeDetail  = (props) => {
             <img src={ingredientsIcon} className="recipe-detail__icon" alt="ingredients icon" />
             <dl className="recipe-detail__table">
               { ingredients && 
-                ingredients.map((ingredient, index) => {
+                ingredients.map((ingredient) => {
                   return (
-                    <div className="recipe-detail__table-row" key={`ingredient-row-${index}`}>
+                    <div className="recipe-detail__table-row" key={ingredient.name}>
                       <dt className="recipe-detail__table-item">{ingredient.quantity}</dt>
                       <dd className="recipe-detail__table-item">{ingredient.name}</dd>
                     </div>
