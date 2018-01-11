@@ -7,6 +7,9 @@ import clockIcon from './clock.svg';
 import ingredientsIcon from './ingredients.svg';
 import notFoundIcon from './not-found.svg';
 
+// Components
+import FavouriteForm from '../FavouriteForm';
+
 const notFoundText = "Sorry, this recipe doesn't exist or may have been removed";
 
 const RecipeDetail  = (props) => {
@@ -30,6 +33,9 @@ const RecipeDetail  = (props) => {
       { props.hasOwnProperty('id') ? 
         <div className="recipe-detail__content">
           <h2 className="recipe-detail__title">{name}</h2>
+          <div className="recipe-detail__actions">
+            <FavouriteForm id={id} />
+          </div>
           <div className="recipe-detail__ingredients">
             <img src={ingredientsIcon} className="recipe-detail__icon" alt="ingredients icon" />
             <dl className="recipe-detail__table">
