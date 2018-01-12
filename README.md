@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app), with an express server.
 
-To get started run:
+To get started clone the repo and `cd` into it, then run:
 
 ```
 
