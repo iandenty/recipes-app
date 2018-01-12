@@ -10,7 +10,7 @@ To get started clone the repo and `cd` into it, then run:
   
 ```
 
-Ensure that you are in the root app folder `recipes-app` (`cd..` after install command), then run:
+Ensure that you are in the root app folder `recipes-app` (`cd ..` after install command), then run:
 
 ```
   npm start
