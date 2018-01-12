@@ -16,6 +16,10 @@ body {
   box-sizing: border-box;
 }
 
+.content {
+  min-height: 400px;
+}
+
 .inner {
   position: relative;
   max-width: 1200px;
