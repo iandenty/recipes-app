@@ -17,6 +17,6 @@ To run tests:
 
 ```
 
-  npm run tests
+  npm run test
 
 ```
