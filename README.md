@@ -6,11 +6,11 @@ To get started clone the repo and `cd` into it, then run:
 
 ```
 
-  npm install && cd recipes-app-client && npm install
+  npm install && cd recipes-app-client && npm install && cd ..
   
 ```
 
-Ensure that you are in the root app folder `recipes-app` (`cd ..` after install command), then run:
+Ensure that you are in the root app folder `/recipes-app`, then run:
 
 ```
   npm start
