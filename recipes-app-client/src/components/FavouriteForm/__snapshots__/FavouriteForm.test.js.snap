@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favourite Form renders and matches the snapshot 1`] = `
+<form
+  action="/api/recipes/1/favourite"
+  className="favourite"
+  method="POST"
+  onSubmit={[Function]}
+>
+  <button
+    className="favouite__button "
+    name="favourite"
+    type="submit"
+    value={1}
+  >
+    <span
+      className="visually-hidden"
+    >
+      Favourite this recipe!
+    </span>
+    ☆
+  </button>
+</form>
+`;
