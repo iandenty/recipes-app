@@ -1,3 +1,6 @@
+/* CSS BEM methodology is used throughout this prototype as I find it lends itself
+well to thinking about the composition of components. */
+
 html {
   font-size: 10px;
 }
