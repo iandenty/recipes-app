@@ -13,7 +13,7 @@ To get started run:
 
 This application uses [Jest](https://facebook.github.io/jest/) as a test runner (shipped with Create React App) and [Enzyme](http://airbnb.io/enzyme/) for isolated component testing.
 
-To run tests
+To run tests:
 
 ```
 
