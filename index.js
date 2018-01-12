@@ -1,9 +1,13 @@
+// This file mocks up some endpoints to interact with the client.
 const express = require('express');
 const slug = require('slugs');
 
 const app = express();
 const port = 5000;
 
+
+// TODO: Accept query params for ingredients with response based on filted results
+// TODO: Accept query params for recipes with response based on filted results
 app.get('/api/recipes', (req, res) => {
   res.json(recipes);
 });
@@ -13,9 +17,12 @@ app.get('/api/recipes/:id', (req, res) => {
   res.json(recipe);
 });
 
-// Not used. Represents endpoint to store favourited recipes. This app assumes user exists and is logged in.
-// If user does not have recipe as favourite then add, else remove that recipe from database.
-// In this prototype, similar functionality being simulated in localStorage on the client-side.
+//TODO add endpoint for list of ingredients /api/ingredients 🤔
+
+// Not used. Represents endpoint to store favourited recipes. This app assumes
+// user exists and is logged in. If user does not have recipe as favourite then
+// add, else remove that recipe from database.In this prototype, similar
+// functionality being simulated in localStorage on the client-side.
 app.post('/api/recipes/:id', (req, res) => { 
   const recipe = recipes.find(recipe => recipe.id === parseInt(req.params.id));
   console.log(`${recipe.name} has been favourited! 👍`)
